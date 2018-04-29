@@ -40,6 +40,16 @@
 					    <type>zip</type>
 						<overWrite>true</overWrite>
 						<outputDirectory>${basedir}/src/main/app</outputDirectory>
+             					<includes>maven-ping.xml</includes>
+					</artifactItem>
+					<artifactItem>
+						<groupId>au.gov.csc</groupId>
+					    <artifactId>maven-ping</artifactId>
+					    <version>1.0.0</version>
+					    <type>zip</type>
+						<overWrite>true</overWrite>
+						<outputDirectory>${basedir}/src/test/munit</outputDirectory>
+             					<includes>maven-ping-test-suite.xml</includes>
 					</artifactItem>
 				</artifactItems>
       			</configuration>
@@ -51,6 +61,8 @@
 ### Add the following to your properties file within the mule application
 ```
 app.id=maven-ping
+
 http.listener.ref=HTTP_Listener_Configuration
+
 http.ping.path=/ping
 ```

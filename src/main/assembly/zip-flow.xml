@@ -14,5 +14,12 @@
                 <include>maven-ping.xml</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <directory>src/test/munit</directory>
+            <outputDirectory/>
+            <includes>
+                <include>maven-ping-test-suite.xml</include>
+            </includes>
+        </fileSet>
     </fileSets>
 </assembly>
